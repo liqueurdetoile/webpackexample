@@ -31,7 +31,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, 'scss/eazy.scss'),
+                include: [
+                    path.resolve(__dirname, 'src/scss/eazy.scss'),
+                    path.resolve(__dirname, 'src/aaa.scss'),
+                    /src/
+                ],
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
