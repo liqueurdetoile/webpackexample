@@ -1,0 +1,58 @@
+$headers: ('h1': 2rem,
+'h2': 1.8rem,
+'h3': 1.6rem,
+'h4': 1.4rem,
+'h5': 1.2rem,
+'h6': 1rem,
+);
+
+@each $header,
+$size in $headers {
+    .#{$header} {
+        font-size: $size;
+    }
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.header {
+    margin: 1rem 0;
+}
+
+
+
+p {
+    margin-bottom: 1rem;
+
+    a:any-link {
+        text-decoration: underline transparent;
+        color: hsl(217, 71%, 53%);
+        transition: all .35s ease-in-out;
+
+        &:hover {
+            text-decoration: underline hsl(217, 71%, 53%);
+        }
+    }
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 1.2px;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link {
+    padding: 12px 8px;
+}

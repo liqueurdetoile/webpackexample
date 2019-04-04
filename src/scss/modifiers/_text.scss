@@ -1,0 +1,20 @@
+.metainfo {
+    font-size: .8rem;
+    display: flex;
+
+    i {
+        margin-right: 5px;
+    }
+
+    & *:not(:last-child) {
+        margin-right: 6px;
+    }
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.upper {
+    text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+@mixin nav-btn {
+    
+    @media (min-width: 600px) {
+        height: 28px;
+        display: flex;
+        align-items: center;
+        margin: 0 12px;
+    }
+
+    @media (max-width:599px) {
+        height: auto;
+        padding: 8px 22px;
+    }
+}
+
+.items-center {
+    display: flex;
+    align-items: center;
+}

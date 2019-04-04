@@ -1,0 +1,69 @@
+.drop {
+    position: relative;
+    @include nav-btn;
+
+    &__menu {
+        display: none;
+        color: hsl(0, 0%, 21%);
+        padding: 12px 0;
+
+        @media (min-width: 600px) {
+            background-color: white;
+            border-radius: 2px;
+            min-width: 100px;
+        }
+
+        &>li>a {
+            display: block;
+            padding: 6px 12px;
+
+            @media (max-width: 599px) {
+                padding: 6px;
+                color: hsl(0, 0%, 21%);
+            }
+        }
+    }
+
+    &__text {
+        transition: text-shadow .32s ease-in-out;
+
+        @media (max-width: 599px) {
+            padding-right: 12px;
+            justify-content: space-between;
+        }
+
+        .arrow {
+            margin-left: 10px;
+            transition: transform .35s ease-in-out;
+
+            @media (max-width: 599px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &:hover, &:active {
+        cursor: pointer !important;
+
+        .arrow {
+            transform: rotate(180deg);
+        }
+
+        .drop__text {
+            text-shadow: .5px 0 0 currentColor;
+        }
+
+        .drop__menu {
+            display: block;
+            height: auto;
+            position: static;
+
+            @media (min-width: 600px) {
+                position: absolute;
+                top: 28px;
+                left: 0;
+            }
+        }
+
+    }
+}

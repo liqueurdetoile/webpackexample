@@ -1,0 +1,11 @@
+.only-mob {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.wrap-mob {
+    @media (max-width: 599px) {
+        flex-wrap: wrap;
+    }
+}

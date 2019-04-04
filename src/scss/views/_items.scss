@@ -1,0 +1,46 @@
+.items {
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    border: 1.5px solid hsl(0, 0%, 96%);
+    margin-bottom: 16px;
+
+    &__header {
+        display: flex;
+        padding: 12px 15px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1.5px solid hsl(0, 0%, 96%);
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        padding: 3px 10px;
+        border-radius: 4px;
+
+        i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+
+    &__item {
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        &>*:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid hsl(0, 0%, 96%);
+        }
+    }
+}

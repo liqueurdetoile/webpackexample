@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+
+    &>* {
+        margin: 10px 0;
+    }
+
+    &__icons {
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 28px;
+
+        &>*:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+}

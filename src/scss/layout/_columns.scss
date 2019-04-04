@@ -1,0 +1,56 @@
+// devices list
+// mob = mobile: max 599px
+// tab = tabled: between 600px and 899px
+// land = mob/tab landscape: between 900px and 1199px
+// hd: between 1200px and 1799px
+// fhd = full hd: between 1800px and 2047px
+// 2k: min 2048px
+
+// .row is used as container for divs with cols
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// wrapper for columns
+.cols {
+    display: flex;
+    flex-flow: column;
+}
+
+// column with all space in all devices
+
+$grid-cols: 24;
+
+@for $i from 1 through $grid-cols {
+
+    @media (max-width: 599px) {
+        .mob#{$i} {
+            width: (100 / ($grid-cols / $i)) * 1%;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 899px) {
+        .tab#{$i} {
+            width: (100 / ($grid-cols / $i)) * 1%;
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        .land#{$i} {
+            width: (100 / ($grid-cols / $i)) * 1%;
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        .hd#{$i} {
+            width: (100 / ($grid-cols / $i)) * 1%;
+        }
+    }
+
+    @media (min-width: 1800px) {
+        .fhd#{$i} {
+            width: (100 / ($grid-cols / $i)) * 1%;
+        }
+    }
+}

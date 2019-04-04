@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 600px) {
+        padding: 12px 6%;
+    }
+
+    @media (max-width: 599px) {
+        height: 48px;
+        padding: 0 5%;
+    }
+
+    &__brand {}
+
+    &__toggle {
+
+        // icons
+        @media (min-width: 600px) {
+            display: none !important;
+        }
+
+    }
+
+    // container for icons and menu list
+    &__menu {
+        // menu list container
+        display: flex;
+        align-items: center;
+
+        &>li>a {
+            @include nav-btn;
+            display: flex;
+            align-items: center;
+
+            & > i {
+                margin-right: 10px;
+            }
+            
+        }
+
+        // mobile styles
+        @media (max-width: 599px) {
+            display: block;
+            font-size: 1.1rem;
+            position: absolute;
+            z-index: 5;
+            padding-top: 22px;
+            height: calc(100vh - 48px);
+            top: 48px;
+            left: -100%;
+            width: 100%;
+            color: hsl(0, 0%, 21%);
+            background-color: hsla(0, 0%, 100%, 0.911);
+            transition: all .42s ease-in-out;
+
+            &.open {
+                overflow-y: scroll;
+                left: 0;
+            }
+        }
+    }
+}

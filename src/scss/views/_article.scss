@@ -1,0 +1,102 @@
+// top article
+
+
+// page to read individual article
+.articlepg {
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__media {
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px
+        }
+    }
+
+    &__content {
+        padding: 16px 0;
+
+        @media(min-width: 900px) {
+            padding: 16px 5%;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &>* {
+                margin: 5px 0;
+            }
+
+            &> :first-child {
+                margin-right: 12px;
+            }
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &>* {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+// articles view
+.article {
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: 5px 0;
+    position: relative;
+
+    &__media {
+        margin-bottom: 6px;
+
+        img {
+            border-radius: 5px;
+            max-width: 100% !important;
+        }
+    }
+
+    &__content {
+        margin: 5px 0;
+
+        &>*:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+
+            &>* {
+                margin: 5px 0;
+            }
+
+
+            &> :first-child {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__title-top {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding: 12px 16px;
+        background-color: rgba(202, 202, 202, 0.74);
+    }
+}
+
+.pgempty {
+    &>* {
+        margin-bottom: 16px;
+    }
+}

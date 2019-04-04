@@ -1,0 +1,70 @@
+.settings {
+    margin: 16px 0;
+    display: flex;
+
+    &__nav {
+        border-radius: 4px;
+        display: flex;
+        flex-flow: column;
+    }
+
+    @mixin option {
+        display: flex;
+        align-items: center;
+    }
+
+    &__option {
+        padding: 14px 16px;
+        @include option();
+
+        @at-root {
+            &__active {
+                @include option();
+                border-left: 4px solid hsl(204, 86%, 53%);
+                background-color: hsla(204, 86%, 53%, 0.1);
+                padding: 14px 16px 14px 12px;
+            }
+        }
+    }
+
+    &__section {
+        border-radius: 4px;
+        display: flex;
+        flex-flow: column;
+
+        &__header {
+            text-align: center;
+        }
+    }
+}
+
+.resetpass {
+    padding: 60px 30px;
+    margin: 60px 0;
+
+    .form {
+        border-radius: 4px;
+
+        &__field {
+            display: flex;
+            flex-flow: column;
+        }
+
+        &__label {
+            margin-bottom: 12px;
+        }
+
+        &__input {
+            padding: 8px 12px;
+            font-size: 1rem;
+            outline: none;
+            border: 1px solid #828282;
+            border-radius: 2px;
+            background-color: transparent;
+        }
+
+        &__btn {
+            padding: 10px 20px;
+        }
+    }
+}
