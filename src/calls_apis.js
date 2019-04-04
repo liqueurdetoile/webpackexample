@@ -1,3 +1,6 @@
+// Load all scss in src folder
+require('./aaa.scss');
+require('./scss/eazy.scss');
 const axios = require('axios');
 
 const getGithubRepoData = link => {
